@@ -111,6 +111,7 @@ p {
 figure {
   margin: 0 auto; 
   display: block; 
+  position: relative;
 }
 figure img {
   max-width: 100%;
@@ -119,7 +120,13 @@ figure img {
 }
 
 figcaption {
-  text-align: center;
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  color: #ffffff; 
+  padding: 10px; 
+  text-align: center; 
 }
 small{
   font-size: 1.25em;
