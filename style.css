@@ -1,71 +1,114 @@
-/* Default styles for all screen sizes */
-html {
-  background-color: red;
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 body {
-  display: grid;
-  grid-gap: 5px;
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+html, nav {
+  background-color: #000000;
+}
+body {
+  width:485px;
+  margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-header {
-  background-color: #FFFFFF;
+header, main {
+  background-color: #ffffff;
+  padding: 5px;
 }
-
+footer, #contact {
+  background-color: #000000;
+  text-align: center;
+}
+nav {
+  padding-bottom: 10px;
+  padding-top:10px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+}
+nav ul li {
+  padding: 10px;
+}
+nav ul li:last-child {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background-color: #000000;
+  border: 3px solid #ffffff;
+}
+nav a {
+  text-decoration: none;
+  color:#ffffff;
+  font-size: 1.5em;
+}
 h1 {
   font-size: 3em;
   color: #007d7b;
 }
-
 h2 {
-  font-size: 2em; /* Fixed typo here */
-  color: #ffffff;
+  font-size: 2em;
+  color: #000000;
 }
-
+p {
+  font-size:1.25;
+}
 .Gallery h2,
 .About h2,
 .Contact h2 {
   text-align: center;
-}
-
-.Contact p,
-form {
-  text-align: center;
-}
-
-footer {
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-}
-
-[href="#top"] {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  border-radius: 5px 0 0px 0px;
-}
-
-nav a {
-  background-color: #000000;
-  text-align: center;
-  color: #FFFFFF;
-  font-size: 1.5em;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #007d7b;
+  padding: 15px;
 }
 
 figure {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: 0 auto; 
+  display: block; 
 }
-
 figure img {
   max-width: 100%;
   height: auto;
@@ -74,107 +117,26 @@ figure img {
 
 figcaption {
   text-align: center;
-  margin-top: 10px;
 }
-
-/* Media queries for different screen sizes */
-@media screen and (max-width: 485px) {
-  body {
-    background-color: #000000;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "Gallery";
-  }
-  header {
-    background-color: #ffffff;
-    color: #007d7b;
-  }
-  footer {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  main {
-    background-color: #ffffff;
-    color: black;
-    grid-template-columns: 1fr;
-  }
-  section {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  p {
-    font-size: 1.25em;
-  }
-  label,
-  input,
-  textarea {
-    display: block;
-    margin-bottom: 10px;
-  }
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: #007d7b;
-    color: #000000;
-    border: none;
-  }
+small{
+  font-size: 1.25em;
 }
-
-nav li {
-  display: inline-flex;
+.Contact h2 {
+  color:#ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-
-@media screen and (min-width: 486px) and (max-width: 880px) {
-  body {
-    background-color: #000000;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "Gallery";
-  }
-  header {
-    background-color: #ffffff;
-    color: #007d7b;
-  }
-  nav a {
-    text-align: center;
-  }
-  main {
-    background-color: #ffffff;
-    grid-template-columns: 1fr 1fr;
-  }
-  section {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  p {
-    font-size: 1.25em;
-  }
+.Contact p{
+  color:#ffffff;
 }
-
-@media screen and (min-width: 881px) and (max-width: 1300px) {
-  body {
-    grid-template-columns: 1fr 1fr 1fr;
+.form-Submit-button {
+  background: #007d7b;
+  color: white;
+  border-style: outset;
+  border-color: #007d7b;
+  text-shadow: none;
   }
-  nav a {
-    text-align: right;
-  }
-  main {
-    background-color: #ffffff;
-    grid-template-columns: 1fr;
-  }
-  section {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  p {
-    font-size: 1.25em;
-  }
+input::placeholder,
+textarea::placeholder {
+  color: #007d7b;
 }
