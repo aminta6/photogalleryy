@@ -143,10 +143,11 @@ figcaption {
 }
 .Contact form{
   width: 70%;
-  display: inline-block;
+  display: block;
   text-align: left;
   position: relative;
   padding: 20px;
+ 
   
 }
 small{
@@ -216,6 +217,9 @@ textarea::placeholder {
 @media (max-width: 1300px) {
   .photos {
       grid-template-columns: repeat(3, minmax(200px, 1fr)); 
+  }
+  nav a {
+  text-align: right;
   }
 }
 
